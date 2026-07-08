@@ -32,7 +32,7 @@ In `CANDriveSubsystem.java`, **delete the placeholder `throw` statement** and re
 
 3. **Apply that configuration to all four motors** using each motor's `getConfigurator().apply(config)` method.
 
-4. **Declare and initialize the `DifferentialDrive` field.** First, add `private final DifferentialDrive drive;` to the class body (above the constructor, alongside the TalonFX fields from Unit 1). Then, inside the constructor, assign `drive = new DifferentialDrive(leftLeader, rightLeader)`. Only the leaders are passed — followers are wired up in Unit 3.
+4. **Declare and initialize the `DifferentialDrive` field.** First, add `private final DifferentialDrive drive;` to the class body (above the constructor, alongside the TalonFX fields from Unit 1). Then, inside the constructor, assign `drive = new DifferentialDrive(leftLeader::set, rightLeader::set)`. Only the leaders are passed — followers are wired up in Unit 3.
 
 > **Why only leader motors in DifferentialDrive?** `DifferentialDrive` only needs the leader motors. The followers are controlled separately via the `Follower` control class (set up in Unit 3). This keeps `DifferentialDrive` simple and lets you manage follower logic explicitly.
 

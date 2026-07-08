@@ -21,7 +21,6 @@ else
 fi
 
 echo "*********************************************************"
-echo "Tests passed. Submitting lesson..."
+echo "Tests passed. Proceeding with push."
 echo "*********************************************************"
 
-gh student submit
